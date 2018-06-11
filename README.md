@@ -1,5 +1,5 @@
 # blog
-1、一个多用户的blog项目，基于原开源作者老卫的项目做的开发，原项目地址https://github.com/waylau/new-star-blog。
+1、一个多用户的blog项目，基于原开原作者老卫的项目做的开发，原项目地址https://github.com/waylau/new-star-blog。
 对原工程的修改内容如下：
 （1）、将gradle项目改成了maven项目；
 （2）、原项目是分为new-star-blog（blog项目），mongodb-file-server（文件上传下载服务）两个项目，我将这两个项目合并为一个项目；

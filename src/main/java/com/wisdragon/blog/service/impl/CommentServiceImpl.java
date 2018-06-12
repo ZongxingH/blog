@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
 /**
  * Comment Service接口实现.
  * 
- * @since 1.0.0 2017年6月6日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 @Service
 public class CommentServiceImpl implements CommentService {

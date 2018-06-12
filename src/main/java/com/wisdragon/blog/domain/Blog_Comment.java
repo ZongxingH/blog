@@ -19,8 +19,8 @@ import org.hibernate.validator.constraints.NotEmpty;
 /**
  * Comment 实体.
  * 
- * @since 1.0.0 2017年4月9日
- * @author <a href="https://waylau.com">Way Lau</a>
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 @Entity // 实体
 public class Blog_Comment implements Serializable {

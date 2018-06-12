@@ -8,8 +8,8 @@ import java.util.Optional;
 /**
  * Vote 服务接口.
  * 
- * @since 1.0.0 2017年4月9日
- * @author <a href="https://waylau.com">Way Lau</a>
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 public interface VoteService {
 	/**

@@ -21,8 +21,8 @@ import org.springframework.stereotype.Service;
 /**
  * 用户服务接口实现.
  *
- * @since 1.0.0 2017年7月27日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 @Service
 public class UserServiceImpl implements UserService, UserDetailsService {

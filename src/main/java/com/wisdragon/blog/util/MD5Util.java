@@ -8,8 +8,8 @@ import java.security.NoSuchAlgorithmException;
 /**
  * MD5 工具类.
  * 
- * @since 1.0.0 2017年3月28日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 public class MD5Util {
 

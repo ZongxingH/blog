@@ -3,8 +3,8 @@ package com.wisdragon.blog.vo;
 /**
  * Tag 值对象.
  * 
- * @since 1.0.0 2017年4月13日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 public class TagVO {
 	

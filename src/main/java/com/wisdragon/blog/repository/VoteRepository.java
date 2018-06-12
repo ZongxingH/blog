@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * Vote Repository接口.
- * @since 1.0.0 2017年6月6日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 public interface VoteRepository extends JpaRepository<Blog_Vote, Long> {
 	

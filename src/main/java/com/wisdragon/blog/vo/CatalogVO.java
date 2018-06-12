@@ -6,8 +6,8 @@ import com.wisdragon.blog.domain.Blog_Catalog;
 /**
  * Catalog VO.
  * 
- * @since 1.0.0 2017年8月1日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 public class CatalogVO {
 	

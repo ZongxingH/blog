@@ -21,8 +21,8 @@ import java.util.List;
 /**
  * Blog 控制器.
  *
- * @author <a href="https://waylau.com">Way Lau</a>
- * @since 1.0.0 2017年8月23日
+ * @author zongxingh@163.com
+ * @since 2018-06-12
  */
 @Controller
 @RequestMapping("/blogs")

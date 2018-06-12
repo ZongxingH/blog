@@ -13,8 +13,8 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 /**
  * EsBlog 文档类.
  * 
- * @since 1.0.0 2017年3月5日
- * @author <a href="https://waylau.com">Way Lau</a>
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 @Document(indexName = "blog", type = "blog")
 public class EsBlog implements Serializable {

@@ -9,8 +9,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * File 文档类.
  * 
- * @since 1.0.0 2017年3月28日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 @Document
 public class Blog_File {

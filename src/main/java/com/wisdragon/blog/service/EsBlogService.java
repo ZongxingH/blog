@@ -13,8 +13,8 @@ import org.springframework.data.domain.Pageable;
 /**
  * EsBlog 服务接口.
  * 
- * @since 1.0.0 2017年6月8日
- * @author <a href="https://waylau.com">Way Lau</a>
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 public interface EsBlogService {
  	

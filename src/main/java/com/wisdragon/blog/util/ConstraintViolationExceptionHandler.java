@@ -11,8 +11,8 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * ConstraintViolationException 处理器.
  * 
- * @since 1.0.0 2017年5月29日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 public class ConstraintViolationExceptionHandler {
 	

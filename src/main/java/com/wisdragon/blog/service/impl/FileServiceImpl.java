@@ -17,8 +17,8 @@ import org.springframework.stereotype.Service;
 /**
  * File 服务.
  * 
- * @since 1.0.0 2017年7月30日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 @Service
 public class FileServiceImpl implements FileService {

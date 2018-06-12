@@ -31,8 +31,8 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * User 控制器.
  * 
- * @since 1.0.0 2017年7月9日
- * @author <a href="https://waylau.com">Way Lau</a>
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 @RestController
 @RequestMapping("/users")

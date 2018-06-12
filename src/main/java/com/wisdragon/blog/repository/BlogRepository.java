@@ -11,8 +11,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 /**
  * Blog 仓库.
  *
- * @since 1.0.0 2017年6月4日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 public interface BlogRepository extends JpaRepository<Blog, Long>{
 

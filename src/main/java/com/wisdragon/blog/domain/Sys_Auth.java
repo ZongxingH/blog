@@ -11,8 +11,8 @@ import org.springframework.security.core.GrantedAuthority;
 /**
  * 权限.
  * 
- * @since 1.0.0 2017年5月30日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 @Entity
 public class Sys_Auth implements GrantedAuthority {

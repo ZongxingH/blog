@@ -12,8 +12,8 @@ import org.springframework.data.domain.Pageable;
 /**
  * 用户服务接口.
  * 
- * @since 1.0.0 2017年7月27日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @since 2018-06-12
+ * @author zongxingh@163.com
  */
 public interface UserService {
 	 /**

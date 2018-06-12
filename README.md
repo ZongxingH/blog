@@ -9,7 +9,7 @@
 
 （3）、原mongodb-file-server项目地址为 https://github.com/waylau/mongodb-file-server
 
-###2、我的想法
+### 2、我的想法
 （1）、想为自己为公司的兄弟们创建一个可以分享自己知识的平台，增强我们的交流与沟通。
 
 （2）、尊重原作者的初衷，这个项目也是开源。

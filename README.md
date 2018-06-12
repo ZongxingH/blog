@@ -31,4 +31,4 @@
    ├── README
    └── THIRD-PARTY-NOTICES
 ```
-
+按照项目里提供的 install-mongodb.md 和 install-es.md 来安装 mongodb 以及 es。

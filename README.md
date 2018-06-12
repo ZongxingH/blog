@@ -19,14 +19,16 @@
 ##二、项目运行
 项目用到了springboot作为基础框架，同时后端用到了oracle、mongodb，以及elasticsearch，所以在运行项目之前先安装好这些组件。在这个项目里我提供了一个mongodb安装后的启动脚本和配置文件，把这些文件拷贝到mongodb安装后的bin的同级目录下，左后的目录结构如下所示：
 
+
+```
    mongodb-4.1.0
    ├── bin
-   ├── db
-   ├── etc
-   ├── GNU-AGPL-3.0
-   ├── logs
+   ├── db
+   ├── etc
+   ├── GNU-AGPL-3.0
+   ├── logs
    ├── MPL-2
-   ├── README
-   └── THIRD-PARTY-NOTICES
-
+   ├── README
+   └── THIRD-PARTY-NOTICES
+```
 

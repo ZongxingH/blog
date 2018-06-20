@@ -27,6 +27,7 @@
         <markdown.version>0.16</markdown.version>
         <h2.version>1.4.196</h2.version>
         <springsecurity4.version>3.0.2.RELEASE</springsecurity4.version>
+        <mysql.version>6.0.6</mysql.version>
     </properties>
 
     <dependencies>
@@ -79,10 +80,16 @@
         </dependency>
         <!-- spring boot 依赖 end -->
 
+        <!--<dependency>-->
+            <!--<groupId>com.oracle</groupId>-->
+            <!--<artifactId>ojdbc6</artifactId>-->
+            <!--<version>${oracle.version}</version>-->
+        <!--</dependency>-->
+
         <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc6</artifactId>
-            <version>${oracle.version}</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
         </dependency>
 
         <dependency>

@@ -26,7 +26,7 @@ public class Blog_Catalog implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id // 主键
-	@GeneratedValue(strategy = GenerationType.SEQUENCE) // 自增长策略
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // 自增长策略
 	private Long id; // 用户的唯一标识
 
 	@NotEmpty(message = "名称不能为空")

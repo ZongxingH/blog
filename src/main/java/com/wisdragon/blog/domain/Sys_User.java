@@ -37,7 +37,7 @@ public class Sys_User implements UserDetails {
 	private static final long serialVersionUID = 1L;
 	
 	@Id // 主键
-	@GeneratedValue(strategy=GenerationType.SEQUENCE) // 自增策略
+	@GeneratedValue(strategy=GenerationType.IDENTITY) // 自增策略
 	private Long id; // 实体一个唯一标识
 	
 	@NotEmpty(message = "姓名不能为空")

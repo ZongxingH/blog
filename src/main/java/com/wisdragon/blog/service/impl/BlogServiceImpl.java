@@ -11,6 +11,7 @@ import com.wisdragon.blog.service.BlogService;
 import com.wisdragon.blog.service.EsBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -68,7 +69,7 @@ public class BlogServiceImpl implements BlogService {
 		// 模糊查询
 		title = "%" + title + "%";
 		String tags = title;
-		Page<Blog> blogs = blogRepository.findByTitleLikeAndUserOrTagsLikeAndUserOrderByCreateTimeDesc(title, 
+		Page<Blog> blogs = blogRepository.findByTitleLikeAndUserOrTagsLikeAndUserOrderByCreateTimeDesc(title,
 				user, tags, user, pageable);
 		return blogs;
 	}

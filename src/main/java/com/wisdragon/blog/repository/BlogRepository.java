@@ -6,6 +6,7 @@ import com.wisdragon.blog.domain.Sys_User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 
 /**
@@ -36,7 +37,6 @@ public interface BlogRepository extends JpaRepository<Blog, Long>{
 	 */
 	Page<Blog> findByTitleLikeAndUserOrTagsLikeAndUserOrderByCreateTimeDesc(String title,
 																			Sys_User user, String tags, Sys_User user2, Pageable pageable);
-	
 	/**
 	 * 根据分类查询博客列表
 	 * @param catalog

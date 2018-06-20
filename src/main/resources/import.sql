@@ -1,10 +1,40 @@
+insert into sys_user (ID, AVATAR, EMAIL, NAME, PASSWORD, USERNAME)
+values (4, null, 'zongxingh@163.com', '黄宗兴', '$2a$10$sKy37yyDfQtt65nT0sPr/u/ShXJdt.D.h4oWCtw60CuyLhx2tQ8cG', 'zongxingh');
+
+insert into sys_user (ID, AVATAR, EMAIL, NAME, PASSWORD, USERNAME)
+values (1, null, 'zongxing.haung@wisdragon.com', '大黄', '$2a$10$sKy37yyDfQtt65nT0sPr/u/ShXJdt.D.h4oWCtw60CuyLhx2tQ8cG', 'admin');
+
+insert into sys_user (ID, AVATAR, EMAIL, NAME, PASSWORD, USERNAME)
+values (2, null, 'zongxingh@126.com', '大哈', '$2a$10$sKy37yyDfQtt65nT0sPr/u/ShXJdt.D.h4oWCtw60CuyLhx2tQ8cG', 'huang.zongxing');
 
 
-INSERT INTO sys_user (id, username, password, name, email) VALUES (1, 'admin', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iKTVKIUi', '老卫', 'i@waylau.com');
-INSERT INTO sys_user (id, username, password, name, email)  VALUES (2, 'waylau', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iKTVKIUi', 'Way Lau', 'waylau@waylau.com');
+insert into sys_auth (ID, NAME)
+values (1, 'ROLE_ADMIN');
 
-INSERT INTO sys_auth (id, name) VALUES (1, 'ROLE_ADMIN');
-INSERT INTO sys_auth (id, name) VALUES (2, 'ROLE_USER');
+insert into sys_auth (ID, NAME)
+values (2, 'ROLE_USER');
 
-INSERT INTO sys_user_auth (user_id, auth_id) VALUES (1, 1);
-INSERT INTO sys_user_auth (user_id, auth_id) VALUES (2, 2);
+
+insert into sys_user_auth (USER_ID, AUTH_ID)
+values (4, 2);
+
+insert into sys_user_auth (USER_ID, AUTH_ID)
+values (1, 1);
+
+insert into sys_user_auth (USER_ID, AUTH_ID)
+values (2, 2);
+
+
+insert into blog_catalog (ID, NAME, USER_ID)
+values (22, '数据库', 4);
+
+insert into blog_catalog (ID, NAME, USER_ID)
+values (23, 'Java开发', 4);
+
+insert into blog_catalog (ID, NAME, USER_ID)
+values (24, 'C/C++开发', 4);
+
+insert into blog_catalog (ID, NAME, USER_ID)
+values (25, '运维', 4);
+
+

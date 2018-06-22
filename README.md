@@ -32,3 +32,24 @@
    └── THIRD-PARTY-NOTICES
 ```
 按照项目里提供的 install-mongodb.md 和 install-es.md 来安装 mongodb 以及 es。
+
+安装es的中文分词器 IK Analysis for Elasticsearch。
+
+下载分词器，下载的分词器的版本一定要与es的版本一致，我这里使用的es是v5.4.1，所以下载的对应的ik版本。
+下载地址：https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v5.4.1/elasticsearch-analysis-ik-5.4.1.zip
+
+在es的安装目录的plugins文件下新建目录 ik，并解压刚刚下好的ik到该目录下，重启 es 即可。
+
+安装好的目录结构如下：
+```
+plugins/
+└── ik
+    ├── commons-codec-1.9.jar
+    ├── commons-logging-1.2.jar
+    ├── config
+    ├── elasticsearch-analysis-ik-5.4.1.jar
+    ├── elasticsearch-analysis-ik-5.4.1.zip
+    ├── httpclient-4.5.2.jar
+    ├── httpcore-4.4.4.jar
+    └── plugin-descriptor.properties
+```

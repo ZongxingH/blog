@@ -54,8 +54,8 @@ public class UserspaceController {
 	@Autowired
 	private UserDetailsService userDetailsService;
 
-	@Value("${file.server.url}")
-	private String fileServerUrl;
+//	@Value("${file.server.url}")
+//	private String fileServerUrl;
 
 	@Autowired
 	private BlogService blogService;
@@ -199,7 +199,7 @@ public class UserspaceController {
 		
 		model.addAttribute("catalogs", catalogs);
 		model.addAttribute("blog", new Blog(null, null, null));
-		model.addAttribute("fileServerUrl", fileServerUrl);// 文件服务器的地址返回给客户端
+//		model.addAttribute("fileServerUrl", fileServerUrl);// 文件服务器的地址返回给客户端
 		return new ModelAndView("/userspace/blogedit", "blogModel", model);
 	}
 
@@ -218,7 +218,7 @@ public class UserspaceController {
 
 		model.addAttribute("catalogs", catalogs);
 		model.addAttribute("blog", blogService.getBlogById(id).get());
-		model.addAttribute("fileServerUrl", fileServerUrl);// 文件服务器的地址返回给客户端
+//		model.addAttribute("fileServerUrl", fileServerUrl);// 文件服务器的地址返回给客户端
 		return new ModelAndView("/userspace/blogedit", "blogModel", model);
 	}
 
@@ -301,7 +301,7 @@ public class UserspaceController {
 	public ModelAndView profile(@PathVariable("username") String username, Model model) {
 		Sys_User user = (Sys_User) userDetailsService.loadUserByUsername(username);
 		model.addAttribute("user", user);
-		model.addAttribute("fileServerUrl", fileServerUrl);// 文件服务器的地址返回给客户端
+//		model.addAttribute("fileServerUrl", fileServerUrl);// 文件服务器的地址返回给客户端
 		return new ModelAndView("/userspace/profile", "userModel", model);
 	}
 

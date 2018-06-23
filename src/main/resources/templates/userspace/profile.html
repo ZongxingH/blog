@@ -94,11 +94,6 @@
 	</div>
 
 	<div th:replace="~{fragments/footer :: footer}">...</div>
-
-	<!-- JavaScript -->
-	<script th:inline="javascript">
-    	var fileServerUrl = [[${userModel.fileServerUrl}]];
-	</script>
 	<script src="../../js/userspace/main.js"
 		th:src="@{/js/userspace/main.js}"></script>
 

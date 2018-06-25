@@ -1,27 +1,14 @@
 package com.wisdragon.blog.domain;
 
+import org.hibernate.validator.constraints.NotEmpty;
+import org.pegdown.Extensions;
+import org.pegdown.PegDownProcessor;
+
+import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.List;
-
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.Lob;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.NotEmpty;
-
-import com.github.rjeschke.txtmark.Processor;
 
 /**
  * Blog 实体
@@ -134,7 +121,9 @@ public class Blog implements Serializable {
 
 	public void setContent(String content) {
 		this.content = content;
-		this.htmlContent = Processor.process(content); // 将Markdown 内容转为 HTML 格式.
+		PegDownProcessor peg=new PegDownProcessor(Extensions.ALL_WITH_OPTIONALS);
+		this.htmlContent=peg.markdownToHtml(content);// 将Markdown 内容转为 HTML 格式.
+//		this.htmlContent = Processor.process(content); // 将Markdown 内容转为 HTML 格式.
 	}
 	public Sys_User getUser() {
 		return user;

@@ -28,6 +28,7 @@
         <h2.version>1.4.196</h2.version>
         <springsecurity4.version>3.0.2.RELEASE</springsecurity4.version>
         <mysql.version>6.0.6</mysql.version>
+        <pegdown.version>1.6.0</pegdown.version>
     </properties>
 
     <dependencies>
@@ -98,10 +99,17 @@
             <version>${commons-lang3.version}</version>
         </dependency>
 
+        <!--<dependency>-->
+            <!--<groupId>es.nitaur.markdown</groupId>-->
+            <!--<artifactId>txtmark</artifactId>-->
+            <!--<version>${markdown.version}</version>-->
+        <!--</dependency>-->
+
+        <!---->
         <dependency>
-            <groupId>es.nitaur.markdown</groupId>
-            <artifactId>txtmark</artifactId>
-            <version>${markdown.version}</version>
+            <groupId>org.pegdown</groupId>
+            <artifactId>pegdown</artifactId>
+            <version>${pegdown.version}</version>
         </dependency>
 
         <dependency>

@@ -113,11 +113,7 @@
 
 
 <div th:replace="~{fragments/footer :: footer}">...</div>
- 
-<!-- JavaScript -->
-<script th:inline="javascript">
-   	var fileServerUrl = [[${blogModel.fileServerUrl}]];
-</script>
+
 <script src="../../js/userspace/blogedit.js" 
 	th:src="@{/js/userspace/blogedit.js}"></script>
  

@@ -11,7 +11,6 @@ import com.wisdragon.blog.service.BlogService;
 import com.wisdragon.blog.service.EsBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -101,7 +100,7 @@ public class BlogServiceImpl implements BlogService {
 		if(optionalBlog.isPresent()) {
 			originalBlog = optionalBlog.get();
 			Sys_User user = (Sys_User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-			Blog_Comment comment = new Blog_Comment(user, commentContent);
+			Blog_Comment comment = new Blog_Comment(originalBlog,user, commentContent);
 			originalBlog.addComment(comment);
 		}
 
@@ -127,7 +126,7 @@ public class BlogServiceImpl implements BlogService {
 			originalBlog = optionalBlog.get();
 			
 			Sys_User user = (Sys_User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-			Blog_Vote vote = new Blog_Vote(user);
+			Blog_Vote vote = new Blog_Vote(originalBlog,user);
 			boolean isExist = originalBlog.addVote(vote);
 			if (isExist) {
 				throw new IllegalArgumentException("该用户已经点过赞了");

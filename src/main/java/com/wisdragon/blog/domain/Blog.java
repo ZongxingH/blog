@@ -67,15 +67,11 @@ public class Blog implements Serializable {
 	
 	@Column(name="tags", length = 100) 
 	private String tags;  // 标签
-	
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinTable(name = "blog_comment", joinColumns = @JoinColumn(name = "blog_id", referencedColumnName = "id"), 
-		inverseJoinColumns = @JoinColumn(name = "comment_id", referencedColumnName = "id"))
+
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,mappedBy = "blog_id")
 	private List<Blog_Comment> comments;
 	
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JoinTable(name = "blog_vote", joinColumns = @JoinColumn(name = "blog_id", referencedColumnName = "id"), 
-		inverseJoinColumns = @JoinColumn(name = "vote_id", referencedColumnName = "id"))
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,mappedBy = "blog_id")
 	private List<Blog_Vote> votes;
 	
 	@OneToOne(cascade = CascadeType.DETACH, fetch = FetchType.LAZY)
@@ -151,12 +147,17 @@ public class Blog implements Serializable {
 	public void setCommentSize(Integer commentSize) {
 		this.commentSize = commentSize;
 	}
-	public Integer getVoteSize() {
+	public Integer Size() {
 		return voteSize;
 	}
 	public void setVoteSize(Integer voteSize) {
 		this.voteSize = voteSize;
 	}
+
+	public Integer getVoteSize() {
+		return voteSize;
+	}
+
 	public String getTags() {
 		return tags;
 	}
@@ -184,7 +185,7 @@ public class Blog implements Serializable {
 
 	/**
 	 * 删除评论
-	 * @param comment
+	 * @param commentId
 	 */
 	public void removeComment(Long commentId) {
 		for (int index=0; index < this.comments.size(); index ++ ) {
@@ -205,7 +206,7 @@ public class Blog implements Serializable {
 		this.votes = votes;
 		this.voteSize = this.votes.size();
 	}
-	 
+
 	/**
 	 * 点赞
 	 * @param vote

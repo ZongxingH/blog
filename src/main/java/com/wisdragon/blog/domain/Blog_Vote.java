@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 /**
@@ -30,7 +31,11 @@ public class Blog_Vote implements Serializable {
 	@OneToOne(cascade = CascadeType.DETACH, fetch = FetchType.LAZY)
 	@JoinColumn(name="user_id")
 	private Sys_User user;
-	
+
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@JoinColumn(name="blog_id")
+	private Blog blog_id;
+
 	@Column(nullable = false) // 映射为字段，值不能为空
 	@org.hibernate.annotations.CreationTimestamp  // 由数据库自动创建时间
 	private Timestamp createTime;
@@ -38,7 +43,8 @@ public class Blog_Vote implements Serializable {
 	protected Blog_Vote() {
 	}
 	
-	public Blog_Vote(Sys_User user) {
+	public Blog_Vote(Blog blog_id,Sys_User user) {
+		this.blog_id = blog_id;
 		this.user = user;
 	}
 	
@@ -55,8 +61,20 @@ public class Blog_Vote implements Serializable {
 	public void setUser(Sys_User user) {
 		this.user = user;
 	}
- 
+
+	public Blog getBlog_id() {
+		return blog_id;
+	}
+
+	public void setBlog_id(Blog blog_id) {
+		this.blog_id = blog_id;
+	}
+
 	public Timestamp getCreateTime() {
 		return createTime;
+	}
+
+	public void setCreateTime(Timestamp createTime) {
+		this.createTime = createTime;
 	}
 }
